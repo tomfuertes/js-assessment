@@ -1,5 +1,7 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
+// Complete 2012.12.21
+
 /**
  * This file defines an object with some methods. Some of these methods are
  * populated incorrectly; your job is to fix them. Other methods are not
@@ -8,7 +10,7 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     globals : function() {
-      myObject = {
+      var myObject = {
         name : 'Jory'
       };
 
@@ -16,21 +18,23 @@ define(function() {
     },
 
     functions : function(flag) {
+      var getValue = null;
+
       if (flag) {
-        function getValue() { return "a"; }
+        getValue = function () { return "a"; };
       } else {
-        function getValue() { return "b"; }
+        getValue = function () { return "b"; };
       }
 
       return getValue();
     },
 
     parseInt : function(num) {
-      return parseInt(num);
+      return parseInt(num, 10);
     },
 
     identity : function(val1, val2) {
-
+      return val1 === val2;
     }
   };
 });

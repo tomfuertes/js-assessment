@@ -2,6 +2,8 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 if (typeof expect !== 'function') { var expect = require('expect.js'); }
 if (typeof window !== 'object') { var window = {}; }
 
+// complete 2012.12.21
+
 define([
   'app/bestPractices'
 ], function(answers) {
