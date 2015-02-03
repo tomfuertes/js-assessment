@@ -11,7 +11,7 @@ define([ 'jquery' ], function($) {
     },
 
     manipulateRemoteData : function(url) {
-      return $.get(url).pipe(function (results) {
+      return $.get(url).then(function (results) {
         return results.people.map(function (el) {return el.name;}).sort();
       });
     }

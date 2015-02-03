@@ -34,7 +34,6 @@ define([
       var url = '/data/testdata.json';
 
       answers.manipulateRemoteData(url).then(function(result) {
-        debugger;
         expect(result).to.have.length(5);
         expect(result.join(' ')).to.eql('Adam Alex Matt Paul Rebecca');
         done();
